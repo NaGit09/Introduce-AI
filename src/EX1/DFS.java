@@ -24,22 +24,27 @@ public class DFS {
     }
 
     public static void main(String[] args) {
-        Node n1 = new Node(1);
-        Node n2 = new Node(2);
-        Node n3 = new Node(3);
-        Node n4 = new Node(4);
-        Node n5 = new Node(5);
-        Node n6 = new Node(6);
+        System.out.println("hello world !");
+        Node node40 =new Node(40);
+        Node node10 =new Node(10);
+        Node node20 =new Node(20);
+        Node node30 =new Node(30);
+        Node node60 =new Node(60);
+        Node node50 =new Node(50);
+        Node node70 =new Node(70);
 
-        n1.addNeighbours(n2);
-        n1.addNeighbours(n3);
+        node40.addNeighbours(node10);
+        node40.addNeighbours(node20);
+        node10.addNeighbours(node30);
+        node20.addNeighbours(node10);
+        node20.addNeighbours(node30);
+        node20.addNeighbours(node60);
+        node20.addNeighbours(node50);
+        node30.addNeighbours(node60);
+        node60.addNeighbours(node70);
+        node50.addNeighbours(node70);
 
-        n2.addNeighbours(n4);
-        n2.addNeighbours(n5);
-
-        n3.addNeighbours(n6);
-
-        System.out.println(dfsUsingStack(n1, 5));
+        System.out.println(dfsUsingStack(node40, 70));
 
     }
 }
